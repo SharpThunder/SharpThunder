@@ -52,15 +52,22 @@ building: homelab (k3s, Terraform, ArgoCD, Prometheus), in progress
 | <img src="https://skillicons.dev/icons?i=kubernetes" width="16"> **rancher/fleet** | [#1185](https://github.com/rancher/fleet/pull/1185) ![merged](https://img.shields.io/badge/-merged-8250df?style=flat-square) | Disabling the GitOps feature broke the Fleet controller deployment |
 | <img src="https://skillicons.dev/icons?i=aws" width="16"> **eksctl-io/eksctl** | [#4047](https://github.com/eksctl-io/eksctl/pull/4047) ![merged](https://img.shields.io/badge/-merged-8250df?style=flat-square) | Missing IAM permission on the EKS minimum-permissions page |
 
-**Bugs found running Kubernetes in production**
+**Issues I solved**
+
+| Project | Issue | How it was solved |
+|---|---|---|
+| rancher/rancher | [#37940](https://github.com/rancher/rancher/issues/37940) | Rancher broke EKS after a console upgrade. I found the fix: Rancher keeps its own copy of the cluster version in the `clusters.management.cattle.io` object, and editing it there cleared the error. Other users applied the same fix. |
+| eksctl-io/eksctl | [#4046](https://github.com/eksctl-io/eksctl/issues/4046) | Missing IAM permission in the minimum-policy docs. I opened the issue and fixed it myself in [#4047](https://github.com/eksctl-io/eksctl/pull/4047). |
+| rancher/rancher | [#36465](https://github.com/rancher/rancher/issues/36465) | Rancher deleted EKS nodegroups on cluster import. Confirmed as a real bug and tracked in [#36128](https://github.com/rancher/rancher/issues/36128), which was fixed. |
+| getredash/redash | [#5526](https://github.com/getredash/redash/issues/5526) | Forced HTTPS redirects on a fresh install. I traced it to the `.dev` domain's built-in HSTS rule and closed it. |
+
+**Other reports**
 
 | Project | Issue | What I hit |
 |---|---|---|
-| rancher/rancher | [#36465](https://github.com/rancher/rancher/issues/36465) | Rancher deleted EKS nodegroups when importing an EKS cluster |
-| rancher/rancher | [#37940](https://github.com/rancher/rancher/issues/37940) | Rancher broke after an EKS version upgrade done from the AWS console |
-| rancher/rancher | [#34690](https://github.com/rancher/rancher/issues/34690) | Feature request: zone awareness for EKS nodegroups |
 | elastic/cloud-on-k8s | [#4835](https://github.com/elastic/cloud-on-k8s/issues/4835) | APM server errors in Kibana on a fresh ECK stack |
 | kodekloudhub/cka-course | [#178](https://github.com/kodekloudhub/certified-kubernetes-administrator-course/issues/178) | Apple Silicon lab script failed on paths with spaces |
+| rancher/rancher | [#34690](https://github.com/rancher/rancher/issues/34690) | Feature request: zone awareness for EKS nodegroups |
 
 ### 🔭 On my radar
 
