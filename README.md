@@ -56,17 +56,20 @@ building: homelab (k3s, Terraform, ArgoCD, Prometheus), in progress
 
 | Project | Issue | How it was solved |
 |---|---|---|
+| rancher/fleet | [#1166](https://github.com/rancher/fleet/issues/1166) | Disabling GitOps broke the Fleet controller. I traced it to the Helm template: `securityContext` was rendered inside the `gitops.enabled` block when debug was off. Fixed in [#1185](https://github.com/rancher/fleet/pull/1185) (merged), and helped other users with a workaround until it shipped. |
+| terraform-aws-eks | [#1748](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1748) | Ingress creation failed on the AWS Load Balancer Controller webhook after the v18 upgrade. I posted the fix: allow port 9443 from the cluster security group to the nodes, which eksctl opens by default but the module doesn't. 7 👍 from people it helped. |
 | rancher/rancher | [#37940](https://github.com/rancher/rancher/issues/37940) | Rancher broke EKS after a console upgrade. I found the fix: Rancher keeps its own copy of the cluster version in the `clusters.management.cattle.io` object, and editing it there cleared the error. Other users applied the same fix. |
 | eksctl-io/eksctl | [#4046](https://github.com/eksctl-io/eksctl/issues/4046) | Missing IAM permission in the minimum-policy docs. I opened the issue and fixed it myself in [#4047](https://github.com/eksctl-io/eksctl/pull/4047). |
 | rancher/rancher | [#36465](https://github.com/rancher/rancher/issues/36465) | Rancher deleted EKS nodegroups on cluster import. Confirmed as a real bug and tracked in [#36128](https://github.com/rancher/rancher/issues/36128), which was fixed. |
 | getredash/redash | [#5526](https://github.com/getredash/redash/issues/5526) | Forced HTTPS redirects on a fresh install. I traced it to the `.dev` domain's built-in HSTS rule and closed it. |
 
-**Other reports**
+**Other reports and PRs**
 
 | Project | Issue | What I hit |
 |---|---|---|
 | elastic/cloud-on-k8s | [#4835](https://github.com/elastic/cloud-on-k8s/issues/4835) | APM server errors in Kibana on a fresh ECK stack |
 | kodekloudhub/cka-course | [#178](https://github.com/kodekloudhub/certified-kubernetes-administrator-course/issues/178) | Apple Silicon lab script failed on paths with spaces |
+| zatosource/zato | [#962](https://github.com/zatosource/zato/pull/962) | PR: fixed argument types for `secret_key` / `jwt_secret` in `zato create server` (closed, not merged) |
 | rancher/rancher | [#34690](https://github.com/rancher/rancher/issues/34690) | Feature request: zone awareness for EKS nodegroups |
 
 ### 🔭 On my radar
