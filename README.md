@@ -43,29 +43,22 @@ building: homelab (k3s, Terraform, ArgoCD, Prometheus), in progress
 | [**eks-platform-design**](https://github.com/SharpThunder/eks-platform-design) | EKS platform for a RealWorld app at millions of users: 3-AZ network, GitHub Actions on autoscaling runners, Prometheus + Loki, and what I'd change in 2026 |
 | [**sharpthunder.github.io**](https://github.com/SharpThunder/sharpthunder.github.io) | My site and blog (Jekyll on GitHub Pages) |
 
-### ☸️ Kubernetes open source
+### 🤝 Open source
 
-**Merged pull requests**
+When something breaks, I dig until I find the cause, then send it upstream so the next person doesn't hit it.
 
-| Project | PR | What it fixed |
+| Project | Link | What I did |
 |---|---|---|
-| <img src="https://skillicons.dev/icons?i=kubernetes" width="16"> **rancher/fleet** | [#1185](https://github.com/rancher/fleet/pull/1185) ![merged](https://img.shields.io/badge/-merged-8250df?style=flat-square) | Disabling the GitOps feature broke the Fleet controller deployment |
-| <img src="https://skillicons.dev/icons?i=aws" width="16"> **eksctl-io/eksctl** | [#4047](https://github.com/eksctl-io/eksctl/pull/4047) ![merged](https://img.shields.io/badge/-merged-8250df?style=flat-square) | Missing IAM permission on the EKS minimum-permissions page |
-
-**Issues I solved or pushed forward**
-
-| Project | Issue | What happened |
-|---|---|---|
-| rancher/fleet | [#1166](https://github.com/rancher/fleet/issues/1166) | Disabling GitOps broke the Fleet controller. I traced it to the Helm template: `securityContext` was rendered inside the `gitops.enabled` block when debug was off. Fixed in [#1185](https://github.com/rancher/fleet/pull/1185) (merged), and helped other users with a workaround until it shipped. |
-| terraform-aws-eks | [#1748](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1748) | Ingress creation failed on the AWS Load Balancer Controller webhook after the v18 upgrade. I posted the fix: allow port 9443 from the cluster security group to the nodes, which eksctl opens by default but the module doesn't. 7 👍 from people it helped. |
-| rancher/rancher | [#37940](https://github.com/rancher/rancher/issues/37940) | Rancher broke EKS after a console upgrade. I found the fix: Rancher keeps its own copy of the cluster version in the `clusters.management.cattle.io` object, and editing it there cleared the error. Other users applied the same fix. |
-| eksctl-io/eksctl | [#4046](https://github.com/eksctl-io/eksctl/issues/4046) | Missing IAM permission in the minimum-policy docs. I opened the issue and fixed it myself in [#4047](https://github.com/eksctl-io/eksctl/pull/4047). |
-| rancher/rancher | [#36465](https://github.com/rancher/rancher/issues/36465) | Rancher deleted EKS nodegroups on cluster import. Confirmed as a real bug and tracked in [#36128](https://github.com/rancher/rancher/issues/36128), which was fixed. |
-| getredash/redash | [#5526](https://github.com/getredash/redash/issues/5526) | Forced HTTPS redirects on a fresh install. I traced it to the `.dev` domain's built-in HSTS rule and closed it. |
-| zatosource/zato | [#962](https://github.com/zatosource/zato/pull/962) | `zato create server` crashed when `secret_key` or `jwt_secret` was passed on the command line: the values arrived as text, but Fernet encryption needs bytes. I reported it, found the cause and sent the fix in #962; the maintainers then implemented the fix upstream themselves. (zato has since closed its GitHub issues, so the original report is no longer public.) |
-| elastic/cloud-on-k8s | [#4835](https://github.com/elastic/cloud-on-k8s/issues/4835) | A fresh ECK stack showed only "Internal Server Error" for APM in Kibana Stack Monitoring. Worked it through with the maintainers: APM Server needs its `monitoring` settings (or Metricbeat) before it reports anything. Fixed on my side, and I asked for a docs warning and a clearer error so the next person doesn't lose a day on it. |
-| kodekloudhub/cka-course | [#178](https://github.com/kodekloudhub/certified-kubernetes-administrator-course/issues/178) | The Apple Silicon kubeadm lab failed whenever the course folder had a space in its path (e.g. `My Drive`), because `multipass transfer` got unquoted paths. Found the cause and posted the fix: quote `"$SCRIPT_DIR/..."`. |
-| rancher/rancher | [#34690](https://github.com/rancher/rancher/issues/34690) | With the Cluster Autoscaler, EKS node groups created by Rancher could scale up in any AZ, so pods with a zonal EBS volume got stuck. Asked for per-node-group subnet/zone selection, as eksctl has; Rancher's EKS operator supports per-node-group subnets today. |
+| rancher/fleet | [#1185](https://github.com/rancher/fleet/pull/1185) ![merged](https://img.shields.io/badge/-PR_merged-8250df?style=flat-square) | Disabling GitOps broke the Fleet controller. Traced it to the Helm template ([#1166](https://github.com/rancher/fleet/issues/1166)) and fixed it. |
+| eksctl-io/eksctl | [#4047](https://github.com/eksctl-io/eksctl/pull/4047) ![merged](https://img.shields.io/badge/-PR_merged-8250df?style=flat-square) | Added a missing IAM permission to the EKS minimum-permissions docs ([#4046](https://github.com/eksctl-io/eksctl/issues/4046)). |
+| zatosource/zato | [#962](https://github.com/zatosource/zato/pull/962) ![solved](https://img.shields.io/badge/-solved-2da44e?style=flat-square) | Server creation crashed on CLI-passed secrets (text vs bytes for Fernet). Reported it, found the cause and sent the fix; the maintainers implemented it upstream. The original report is no longer public. |
+| terraform-aws-eks | [#1748](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1748) ![solved](https://img.shields.io/badge/-solved-2da44e?style=flat-square) | Load Balancer Controller webhook failed after the v18 upgrade. Posted the fix (open 9443 to nodes); 7 👍. |
+| rancher/rancher | [#37940](https://github.com/rancher/rancher/issues/37940) ![solved](https://img.shields.io/badge/-solved-2da44e?style=flat-square) | EKS broke after an upgrade. Found the stale version in `clusters.management.cattle.io`; others used the same fix. |
+| elastic/cloud-on-k8s | [#4835](https://github.com/elastic/cloud-on-k8s/issues/4835) ![solved](https://img.shields.io/badge/-solved-2da44e?style=flat-square) | APM showed only "Internal Server Error" in Stack Monitoring. Worked out the missing `monitoring` config with the maintainers. |
+| kodekloud CKA course | [#178](https://github.com/kodekloudhub/certified-kubernetes-administrator-course/issues/178) ![solved](https://img.shields.io/badge/-solved-2da44e?style=flat-square) | kubeadm lab failed on paths with spaces. Found the unquoted paths and posted the fix. |
+| getredash/redash | [#5526](https://github.com/getredash/redash/issues/5526) ![solved](https://img.shields.io/badge/-solved-2da44e?style=flat-square) | Forced HTTPS on a fresh install. Traced it to the `.dev` domain's built-in HSTS. |
+| rancher/rancher | [#36465](https://github.com/rancher/rancher/issues/36465) ![reported](https://img.shields.io/badge/-reported-0969da?style=flat-square) | Rancher deleted EKS nodegroups on import. Confirmed as a bug and fixed in [#36128](https://github.com/rancher/rancher/issues/36128). |
+| rancher/rancher | [#34690](https://github.com/rancher/rancher/issues/34690) ![reported](https://img.shields.io/badge/-reported-0969da?style=flat-square) | Autoscaled EKS node groups ignored zones and stranded EBS-backed pods. Asked for per-node-group subnets, which Rancher supports today. |
 
 ### 🔭 On my radar
 
