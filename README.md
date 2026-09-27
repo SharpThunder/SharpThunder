@@ -52,9 +52,9 @@ building: homelab (k3s, Terraform, ArgoCD, Prometheus), in progress
 | <img src="https://skillicons.dev/icons?i=kubernetes" width="16"> **rancher/fleet** | [#1185](https://github.com/rancher/fleet/pull/1185) ![merged](https://img.shields.io/badge/-merged-8250df?style=flat-square) | Disabling the GitOps feature broke the Fleet controller deployment |
 | <img src="https://skillicons.dev/icons?i=aws" width="16"> **eksctl-io/eksctl** | [#4047](https://github.com/eksctl-io/eksctl/pull/4047) ![merged](https://img.shields.io/badge/-merged-8250df?style=flat-square) | Missing IAM permission on the EKS minimum-permissions page |
 
-**Issues I solved**
+**Issues I solved or pushed forward**
 
-| Project | Issue | How it was solved |
+| Project | Issue | What happened |
 |---|---|---|
 | rancher/fleet | [#1166](https://github.com/rancher/fleet/issues/1166) | Disabling GitOps broke the Fleet controller. I traced it to the Helm template: `securityContext` was rendered inside the `gitops.enabled` block when debug was off. Fixed in [#1185](https://github.com/rancher/fleet/pull/1185) (merged), and helped other users with a workaround until it shipped. |
 | terraform-aws-eks | [#1748](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1748) | Ingress creation failed on the AWS Load Balancer Controller webhook after the v18 upgrade. I posted the fix: allow port 9443 from the cluster security group to the nodes, which eksctl opens by default but the module doesn't. 7 👍 from people it helped. |
