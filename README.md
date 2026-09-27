@@ -36,11 +36,24 @@ before:
 building: homelab (k3s, Terraform, ArgoCD, Prometheus), in progress
 ```
 
-### 🔧 Upstream
+### ☸️ Kubernetes open source
 
-- [eksctl-io/eksctl#4047](https://github.com/eksctl-io/eksctl/pull/4047): documented a missing IAM permission on the minimum-permissions page (merged)
-- [rancher/fleet#1185](https://github.com/rancher/fleet/pull/1185): fixed Fleet controller deployment breaking when GitOps is disabled (merged)
-- [rancher/rancher#36465](https://github.com/rancher/rancher/issues/36465): reported Rancher deleting EKS nodegroups when importing an EKS cluster
+**Merged pull requests**
+
+| Project | PR | What it fixed |
+|---|---|---|
+| <img src="https://skillicons.dev/icons?i=kubernetes" width="16"> **rancher/fleet** | [#1185](https://github.com/rancher/fleet/pull/1185) ![merged](https://img.shields.io/badge/-merged-8250df?style=flat-square) | Disabling the GitOps feature broke the Fleet controller deployment |
+| <img src="https://skillicons.dev/icons?i=aws" width="16"> **eksctl-io/eksctl** | [#4047](https://github.com/eksctl-io/eksctl/pull/4047) ![merged](https://img.shields.io/badge/-merged-8250df?style=flat-square) | Missing IAM permission on the EKS minimum-permissions page |
+
+**Bugs found running Kubernetes in production**
+
+| Project | Issue | What I hit |
+|---|---|---|
+| rancher/rancher | [#36465](https://github.com/rancher/rancher/issues/36465) | Rancher deleted EKS nodegroups when importing an EKS cluster |
+| rancher/rancher | [#37940](https://github.com/rancher/rancher/issues/37940) | Rancher broke after an EKS version upgrade done from the AWS console |
+| rancher/rancher | [#34690](https://github.com/rancher/rancher/issues/34690) | Feature request: zone awareness for EKS nodegroups |
+| elastic/cloud-on-k8s | [#4835](https://github.com/elastic/cloud-on-k8s/issues/4835) | APM server errors in Kibana on a fresh ECK stack |
+| kodekloudhub/cka-course | [#178](https://github.com/kodekloudhub/certified-kubernetes-administrator-course/issues/178) | Apple Silicon lab script failed on paths with spaces |
 
 ### 🔭 On my radar
 
@@ -54,6 +67,23 @@ I've starred **1,100+ repositories since 2016**. It's how I keep up with the eco
 | [talos](https://github.com/siderolabs/talos) | [argo-cd](https://github.com/argoproj/argo-cd) | [uptime-kuma](https://github.com/louislam/uptime-kuma) | [wazuh](https://github.com/wazuh/wazuh) |
 | [vcluster](https://github.com/loft-sh/vcluster) | [renovate](https://github.com/renovatebot/renovate) | [osquery](https://github.com/osquery/osquery) | [sealed-secrets](https://github.com/bitnami/sealed-secrets) |
 | [Reloader](https://github.com/stakater/Reloader) | [act](https://github.com/nektos/act) | [below](https://github.com/facebookincubator/below) | [How-To-Secure-A-Linux-Server](https://github.com/imthenachoman/How-To-Secure-A-Linux-Server) |
+
+#### 📊 What my stars say
+
+<!-- STATS:START -->
+```text
+1,166 repos starred since 2016
+
+Kubernetes             ████████████████████████ 301
+Security               ███████████████          183
+Containers             ██████████               129
+Cloud (AWS/Azure/GCP)  █████████                110
+Observability          ██████                   81
+IaC                    █████                    61
+CI/CD & GitOps         █████                    61
+Self-hosted & homelab  ██                       25
+```
+<!-- STATS:END -->
 
 #### ⭐ Recently starred
 
