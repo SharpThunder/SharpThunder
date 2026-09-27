@@ -36,6 +36,13 @@ before:
 building: homelab (k3s, Terraform, ArgoCD, Prometheus), in progress
 ```
 
+### 📐 Projects
+
+| Project | What it is |
+|---|---|
+| [**eks-platform-design**](https://github.com/SharpThunder/eks-platform-design) | EKS platform for a RealWorld app at millions of users: 3-AZ network, GitHub Actions on autoscaling runners, Prometheus + Loki, and what I'd change in 2026 |
+| [**sharpthunder.github.io**](https://github.com/SharpThunder/sharpthunder.github.io) | My site and blog (Jekyll on GitHub Pages) |
+
 ### ☸️ Kubernetes open source
 
 **Merged pull requests**
