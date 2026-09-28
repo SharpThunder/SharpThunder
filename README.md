@@ -95,14 +95,14 @@ Self-hosted & homelab  ██                       25
 <!-- STARRED:START -->
 | Repo | What it is | ⭐ |
 |---|---|---|
-| [openchoreo/openchoreo](https://github.com/openchoreo/openchoreo) | OpenChoreo is an internal developer platform for Kubernetes | 1,598 |
-| [floci-io/floci](https://github.com/floci-io/floci) | Light, fluffy, and always free - The AWS Local Emulator alternative | 25,828 |
+| [openchoreo/openchoreo](https://github.com/openchoreo/openchoreo) | OpenChoreo is an internal developer platform for Kubernetes | 1,604 |
+| [floci-io/floci](https://github.com/floci-io/floci) | Light, fluffy, and always free - The AWS Local Emulator alternative | 25,987 |
 | [epam/BrainTF](https://github.com/epam/BrainTF) | AI tools for remediation and security analysis of Terraform code | 14 |
 | [abhayraghuwanshi/k8s-ingress-gen](https://github.com/abhayraghuwanshi/k8s-ingress-gen) | yaml generator | 117 |
-| [darrylmorley/whatcable](https://github.com/darrylmorley/whatcable) | macOS menu bar app that tells you, in plain English, what each USB-C cable plugged into... | 8,789 |
-| [floci-io/floci-az](https://github.com/floci-io/floci-az) | Light, fluffy, and always free - Local Azure Emulator | 691 |
-| [antonbabenko/terraform-skill](https://github.com/antonbabenko/terraform-skill) | Terraform & OpenTofu Skill for AI Agents - testing, modules, CI/CD, and production patt... | 2,384 |
-| [alexellis/k3sup](https://github.com/alexellis/k3sup) | bootstrap K3s over SSH in < 60s 🚀 | 7,430 |
+| [darrylmorley/whatcable](https://github.com/darrylmorley/whatcable) | macOS menu bar app that tells you, in plain English, what each USB-C cable plugged into... | 8,798 |
+| [floci-io/floci-az](https://github.com/floci-io/floci-az) | Light, fluffy, and always free - Local Azure Emulator | 709 |
+| [antonbabenko/terraform-skill](https://github.com/antonbabenko/terraform-skill) | Terraform & OpenTofu Skill for AI Agents - testing, modules, CI/CD, and production patt... | 2,387 |
+| [alexellis/k3sup](https://github.com/alexellis/k3sup) | bootstrap K3s over SSH in < 60s 🚀 | 7,432 |
 <!-- STARRED:END -->
 
 <sub>This list updates itself weekly via a <a href=".github/workflows/starred.yml">GitHub Actions workflow</a>.</sub>
