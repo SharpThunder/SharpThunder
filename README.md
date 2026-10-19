@@ -77,13 +77,13 @@ I've starred **1,100+ repositories since 2016**. It's how I keep up with the eco
 
 <!-- STATS:START -->
 ```text
-1,166 repos starred since 2016
+1,170 repos starred since 2016
 
 Kubernetes             ████████████████████████ 301
 Security               ███████████████          183
 Containers             ██████████               129
-Cloud (AWS/Azure/GCP)  █████████                110
-Observability          ██████                   81
+Cloud (AWS/Azure/GCP)  █████████                111
+Observability          ███████                  82
 IaC                    █████                    61
 CI/CD & GitOps         █████                    61
 Self-hosted & homelab  ██                       25
@@ -95,14 +95,14 @@ Self-hosted & homelab  ██                       25
 <!-- STARRED:START -->
 | Repo | What it is | ⭐ |
 |---|---|---|
-| [rehan-remade/universal-modder](https://github.com/rehan-remade/universal-modder) | Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost... | 3,576 |
-| [openchoreo/openchoreo](https://github.com/openchoreo/openchoreo) | OpenChoreo is an internal developer platform for Kubernetes | 1,625 |
-| [floci-io/floci](https://github.com/floci-io/floci) | Light, fluffy, and always free - The AWS Local Emulator alternative | 26,380 |
+| [BerriAI/litellm](https://github.com/BerriAI/litellm) | The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI... | 61,560 |
+| [morluto/rea](https://github.com/morluto/rea) | Reverse engineer anything with agents, from app behavior down to native binaries. | 330,733 |
+| [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid,... | 58,128 |
+| [rehan-remade/universal-modder](https://github.com/rehan-remade/universal-modder) | Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost... | 8,403 |
+| [openchoreo/openchoreo](https://github.com/openchoreo/openchoreo) | OpenChoreo is an internal developer platform for Kubernetes | 1,657 |
+| [floci-io/floci](https://github.com/floci-io/floci) | Light, fluffy, and always free - The AWS Local Emulator alternative | 26,932 |
 | [epam/BrainTF](https://github.com/epam/BrainTF) | AI tools for remediation and security analysis of Terraform code | 15 |
 | [abhayraghuwanshi/k8s-ingress-gen](https://github.com/abhayraghuwanshi/k8s-ingress-gen) | yaml generator | 117 |
-| [darrylmorley/whatcable](https://github.com/darrylmorley/whatcable) | macOS menu bar app that tells you, in plain English, what each USB-C cable plugged into... | 8,832 |
-| [floci-io/floci-az](https://github.com/floci-io/floci-az) | Light, fluffy, and always free - Local Azure Emulator | 739 |
-| [antonbabenko/terraform-skill](https://github.com/antonbabenko/terraform-skill) | Terraform & OpenTofu Skill for AI Agents - testing, modules, CI/CD, and production patt... | 2,399 |
 <!-- STARRED:END -->
 
 <sub>This list updates itself weekly via a <a href=".github/workflows/starred.yml">GitHub Actions workflow</a>.</sub>
