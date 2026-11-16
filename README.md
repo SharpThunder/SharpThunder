@@ -77,7 +77,7 @@ I've starred **1,100+ repositories since 2016**. It's how I keep up with the eco
 
 <!-- STATS:START -->
 ```text
-1,170 repos starred since 2016
+1,169 repos starred since 2016
 
 Kubernetes             ████████████████████████ 301
 Security               ███████████████          184
@@ -95,14 +95,14 @@ Self-hosted & homelab  ██                       26
 <!-- STARRED:START -->
 | Repo | What it is | ⭐ |
 |---|---|---|
-| [ricsanfre/pi-cluster](https://github.com/ricsanfre/pi-cluster) | Pi Kubernetes Cluster. Homelab kubernetes cluster automated with Ansible, Terraform and... | 590 |
-| [lasharor/cleanyourtv-WebOS](https://github.com/lasharor/cleanyourtv-WebOS) | A clean home screen for rooted LG webOS TVs, with an optional debloat of LG's ads and t... | 468 |
-| [BerriAI/litellm](https://github.com/BerriAI/litellm) | The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI... | 62,972 |
-| [morluto/rea](https://github.com/morluto/rea) | Reverse engineer anything with agents, from app behavior down to native binaries. | 445,886 |
-| [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid,... | 66,043 |
-| [rehan-remade/universal-modder](https://github.com/rehan-remade/universal-modder) | Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost... | 9,550 |
-| [openchoreo/openchoreo](https://github.com/openchoreo/openchoreo) | OpenChoreo is an internal developer platform for Kubernetes | 1,852 |
-| [floci-io/floci](https://github.com/floci-io/floci) | Light, fluffy, and always free - The AWS Local Emulator alternative | 31,177 |
+| [ricsanfre/pi-cluster](https://github.com/ricsanfre/pi-cluster) | Pi Kubernetes Cluster. Homelab kubernetes cluster automated with Ansible, Terraform and... | 591 |
+| [lasharor/cleanyourtv-WebOS](https://github.com/lasharor/cleanyourtv-WebOS) | A clean home screen for rooted LG webOS TVs, with an optional debloat of LG's ads and t... | 529 |
+| [BerriAI/litellm](https://github.com/BerriAI/litellm) | The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI... | 63,345 |
+| [morluto/rea](https://github.com/morluto/rea) | Reverse engineer anything with agents, from app behavior down to native binaries. | 463,403 |
+| [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid,... | 67,569 |
+| [rehan-remade/universal-modder](https://github.com/rehan-remade/universal-modder) | Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost... | 9,725 |
+| [openchoreo/openchoreo](https://github.com/openchoreo/openchoreo) | OpenChoreo is an internal developer platform for Kubernetes | 1,904 |
+| [floci-io/floci](https://github.com/floci-io/floci) | Light, fluffy, and always free - The AWS Local Emulator alternative | 31,822 |
 <!-- STARRED:END -->
 
 <sub>This list updates itself weekly via a <a href=".github/workflows/starred.yml">GitHub Actions workflow</a>.</sub>
